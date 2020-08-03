@@ -14,6 +14,8 @@ public class Programa {
         // length'
         // isEmpty
         // contains
+        // replaceAll
+
         String nome = "Alura";
 
         String outroNome = nome.replace("Al", "aLL");
@@ -47,6 +49,12 @@ public class Programa {
         String teste= "Ana 000 1111";
         String nomeSplit[] = teste.split(" ");
         System.out.println(nomeSplit[2]);
+
+        String cpf = "157.234.234-00";
+        //String cpfFormatado = cpf.replaceAll("\\.", ""); //Usamos duas barras para que o java interprete o ponto como apenas um ponto e nao um regex
+        //String cpfFormatado = cpf.replaceAll("-", "")
+        String cpfFormatado = cpf.replaceAll("[^0-9+]",""); // Esse reges representa tudo o que nao for um numero de 0 a 9.
+        System.out.println("CPF formato: " +cpfFormatado);
 
 
         System.out.println(outroNome);
